@@ -1,0 +1,146 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #111), color-stop(50%, #ff9100));
+  background: linear-gradient(#111 50%, #ff9100 50%); }
+
+.container {
+  position: absolute;
+  width: 100vw;
+  max-width: 38em;
+  background-color: #1e293b;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 3em 1.8em; }
+  .container .search_inner {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.2em; }
+    .container .search_inner #input_movie,
+    .container .search_inner #btn_search {
+      border: none;
+      outline: none;
+      font-size: 16px;
+      border-radius: 0.3em; }
+    .container .search_inner #input_movie {
+      background-color: transparent;
+      border: 1px solid #a0a0a0;
+      color: #fff;
+      padding: 0.7em;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease; }
+      .container .search_inner #input_movie:focus {
+        border-color: #fff;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+        .container .search_inner #input_movie:focus::-webkit-input-placeholder {
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          opacity: 0; }
+        .container .search_inner #input_movie:focus:-ms-input-placeholder {
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          opacity: 0; }
+        .container .search_inner #input_movie:focus::-ms-input-placeholder {
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          opacity: 0; }
+        .container .search_inner #input_movie:focus::placeholder {
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          opacity: 0; }
+    .container .search_inner #btn_search {
+      cursor: pointer;
+      background-color: #ff9100; }
+      .container .search_inner #btn_search:active {
+        background-color: #111;
+        color: #fff;
+        border: 1px solid #ff9100; }
+  .container #result {
+    color: #fff; }
+    .container #result .info {
+      position: relative;
+      display: grid;
+      grid-template-columns: 4fr 8fr;
+      margin-top: 1.2em; }
+      .container #result .info .poster {
+        width: 100%; }
+      .container #result .info h2 {
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 600;
+        letter-spacing: 0.06em; }
+      .container #result .info .rating {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        gap: 0.06em;
+        margin: 0.6em 0 0.9em; }
+        .container #result .info .rating img {
+          width: 1.2em; }
+        .container #result .info .rating h4 {
+          display: inline-block;
+          font-size: 1.1em;
+          font-weight: 500; }
+      .container #result .info .details {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        font-size: 1em;
+        gap: 1em;
+        color: #a0a0a0;
+        margin: 0.6em 0;
+        font-weight: 300; }
+      .container #result .info .genre {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+        .container #result .info .genre div {
+          border: 1px solid #a0a0a0;
+          font-size: 0.75em;
+          padding: 0.4em 1.6em;
+          border-radius: 0.4em;
+          font-weight: 300; }
+    .container #result h3 {
+      font-weight: 500;
+      margin-top: 1.2em; }
+    .container #result p {
+      font-size: 0.9em;
+      font-weight: 300;
+      line-height: 2em;
+      text-align: justify;
+      color: #a0a0a0; }
+    .container #result .msg {
+      text-align: center; }
+
+@media screen and (max-width: 600px) {
+  .container {
+    font-size: 14px; }
+
+  .poster {
+    margin: auto;
+    padding: auto;
+    max-width: 11em; }
+
+  .info {
+    grid-template-columns: 1fr; } }
